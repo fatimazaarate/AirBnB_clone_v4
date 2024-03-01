@@ -20,6 +20,6 @@ header .logo {
     border-radius: 20px;
 }
 
-.available {
+#api_status.available {
     background: #ff545f;
 }

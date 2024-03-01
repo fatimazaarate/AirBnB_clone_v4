@@ -22,7 +22,7 @@ $(document).ready(function () {
             $('div#api_status').removeClass('available');
         }
     });
-    function placesSearch (filters = {}) {
+    function placesSearch (filters) {
         $.ajax({
             url: "http://0.0.0.0:5001/api/v1/places_search/",
             type: "POST",
@@ -51,7 +51,7 @@ $(document).ready(function () {
         });
     };
     $('button').on("click", function() {
-        const filters = {amenities: Object.keys(my_amenities)};
+        const filters = {amenities: Object.keys(amenity_dict)};
         placesSearch(filters);
     });
     placesSearch();
